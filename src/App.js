@@ -10,27 +10,31 @@ import { ForecastWeather } from "./components/ForecastWeather.js";
 
 export const App = () => {
     return (
-    <Stack sx={{border: "1px solid red"}}>
-        <Box sx={{border: "1px solid black"}}>
+    <Stack gap={2}>
+        <Box >
             <Banner />
         </Box>
-        <Box sx={{border: "1px solid black"}}>
+        <Box>
             <Grid container>
-                <Grid item xs={12} sm={12} md={6} sx={{border: "1px solid black"}}>
-                    <Box>
-                        <SearchForm />
-                    </Box>
-                    <Box>
+                <Grid item xs={12} sm={12} md={6} >
+                    <Stack gap={2}>
+                        <Box>
+                            <SearchForm />
+                        </Box>
+                        <Box>
                         <SearchHistory />
-                    </Box>
+                        </Box>
+                    </Stack>
                 </Grid >
-                <Grid item xs={12} sm={12} md={6} sx={{border: "1px solid black"}}>
-                    <Box>
-                        <CurrentWeather />
-                    </Box>
-                    <Box>
-                        <ForecastWeather />
-                    </Box>
+                <Grid item xs={12} sm={12} md={6} >
+                    <Stack gap={2}>
+                        <Box>
+                            <CurrentWeather />
+                        </Box>
+                        <Box>
+                            <ForecastWeather />
+                        </Box>
+                    </Stack>
                 </Grid>
             </Grid>
         </Box>
